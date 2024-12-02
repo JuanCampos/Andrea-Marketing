@@ -9,12 +9,20 @@
 body{
     text-align: center;
     font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.938rem;
 }
 
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+    font-weight: 600;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .head{
@@ -28,11 +36,6 @@ body{
     z-index: 100;
 }
 
-.navbar{
-    display: flex;
-    margin-right: 10px;
-}
-
 .logo{
     margin-left: 30px;
 }
@@ -43,9 +46,9 @@ body{
     font-size: 24px;
 }
 
-.navbar a{
+.navbar{
     display: flex;
-    gap: 15px;
+    margin-right: 10px;
 }
 
 .navbar a{
@@ -53,7 +56,6 @@ body{
     padding: 23px 20px;
     color: #fff;
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 20px;
 }
 
@@ -64,6 +66,7 @@ body{
 .hamburger {
     display: none;
     background: none;
+    padding-right: 25px;
     border: none;
     font-size: 24px;
     color: white;
@@ -71,25 +74,25 @@ body{
 }
 
 .header{
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh !important;
     background: url(img/header.png) no-repeat center;
+    height: 70vh !important;
     background-size: cover;
     background-position: center 30px;
 }
 
 .header::before {
-    content: ''; /* El pseudo-elemento necesita un contenido vacío */
+    content: ''; 
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2); /* Capa oscura encima de la imagen */
-    z-index: 1; /* Coloca esta capa detrás del contenido */
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .title{
@@ -98,6 +101,15 @@ body{
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.title-2{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
     position: relative;
     z-index: 2;
 }
@@ -111,24 +123,14 @@ p{
     z-index: 2;
 }
 
-/*
-.btn-1{
-    display: inline-block;
-    padding: 10px 40px;
-    border: 2px solid #be9335;
-    color: #fff;
-    text-decoration: none;
-    background: #be9335;
+.text{
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #000;
+    padding: 0 100px;
     position: relative;
     z-index: 2;
 }
-
-.btn-1:hover{
-    background: none;
-    position: relative;
-    z-index: 2;
-}
-*/
 
 .btn{
     display: inline-block;
@@ -157,7 +159,7 @@ p{
 }
 
 .content{
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,7 +168,15 @@ p{
 
 .sau{
     padding: 30px;
-    background: #1f1d1d;
+    background: #171717;
+}
+.mas{
+    padding: 30px;
+    background: #171717;
+}
+.mas-2{
+    padding: 30px;
+    background: #171717;
 }
 
 .box-container{
@@ -177,13 +187,23 @@ p{
 }
 
 .box-container .box{
-    height: 11rem;
+    height: auto;
     width: 17rem;
-    background: #101010;
+    background: #2c2c2c;
     text-align: center;
     border-radius: 1rem;
     box-shadow: 0 .3rem 5rem rgba(0, 0, 0, .5);
     margin: 2rem;
+}
+.box-container-2 .box{
+    height: auto;
+    width: 17rem;
+    background: #2c2c2c;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(0, 0, 0, .5);
+    margin: 2rem;
+    padding: 3px 0 0 0;
 }
 
 .box-container .box i{
@@ -202,32 +222,97 @@ p{
     font-size: 20px;
     color: #be9335;
 }
+.box-container-2 .box h3{
+    font-size: 20px;
+    color: #be9335;
+}
 
 .box-container .box p{
     padding: 0 15px;
     font-size: 16px;
 }
-
-.about{
-    background: #171717;
+.box-container-2 .box p{
+    padding: 0 15px;
+    font-size: 16px;
 }
 
-.price{
-    background: url(img/costos.jpg) no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
+.about{
+    background: #1f1d1d;
+}
+
+.coffee{
+    padding: 100px 0;
+    background-color: #E1E2E6;
+    position: relative;
+}
+
+.coffee-content{
     text-align: center;
+}
+
+.coffee-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    display: grid;
+}
+
+
+.coffee-1 h3{
+    color: #be9335;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
 .contact{
     padding-top: 20px;
-    background: #171717;
+    background: #1f1d1d;
     padding-bottom: 0;
+}
+
+.footer {
+    background-color: #1f1d1d;
+    width: 100%;
+}
+
+.footer .footer-box {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .footer-box .social-media a {
+    color: white;
+    background-color: #333333;
+    border-radius: 50%;
+    font-size: 17px;
+    padding: 10px 12px;
+    margin: 5px;
+}
+
+.footer .footer-box .social-media a:hover {
+    opacity: .7;
+    transition: .5s all ease-in-out;
+}
+
+.footer .footer-box .copyright {
+    color: rgb(71, 71, 71);
+    font-size: 15px;
+}
+
+.footer .footer-box .brand {
+    color: white;
+    font-size: 20px;
+}
+
+.footer .footer-box .brand span {
+    color: #be9335;
 }
 
 @media (max-width: 768px) {
     .navbar {
-        display: none; /* Ocultar el menú por defecto */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -243,20 +328,21 @@ p{
     }
 
     .hamburger {
-        display: block; /* Mostrar botón de hamburguesa */
+        display: block; 
     }
 
     .navbar.active {
-        display: flex; /* Mostrar menú cuando sea activo */
+        display: flex; 
+        max-height: 300px;
     }
 
     .header{
-        position: relative; /* Necesario para posicionar el pseudo-elemento */
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 24vh !important;
-        background: url(img/header.png) no-repeat center;
+        height: 54vh !important;
+        background: url(img/header.png) no-repeat;
         background-size: contain;
         background-position: center 62px;
     }
@@ -272,11 +358,96 @@ p{
     }
 
     .title{
-        margin-bottom: 0;
+        margin: 10px 0;
         font-size: 40px;
     }
 
     .sau{
-        height: 140vh;
+        height: auto;
+    }
+    
+    .coffee{
+        padding: 30px;
+    }
+
+    .coffee-content h2{
+        padding: 0;
+    }
+
+    .txt-p{
+        padding: 0;
+    }
+
+    .coffee-group{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .footer .footer-box .social-media a {
+        color: white;
+        background-color: #333333;
+        border-radius: 50%;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .footer .footer-box .copyright {
+        color: rgb(71, 71, 71);
+        font-size: 15px;
+    }
+
+    .footer .footer-box .brand {
+        color: white;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 500px) {
+    
+    .header{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 37vh !important;
+        background: url(img/header.png) no-repeat;
+        background-size: contain;
+        background-position: center 52px;
+    }
+    .header::before {
+        content: ''; /* El pseudo-elemento necesita un contenido vacío */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2); /* Capa oscura encima de la imagen */
+        z-index: 1; /* Coloca esta capa detrás del contenido */
+    }
+    
+    .footer .footer-box {
+        flex-direction: column;
+    }
+
+    .footer .footer-box .social-media a {
+        color: white;
+        background-color: #333333;
+        border-radius: 50%;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .footer .footer-box .copyright {
+        color: rgb(71, 71, 71);
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .footer .footer-box .brand {
+        color: white;
+        font-size: 15px;
+        margin-top: 10px;
     }
 }
