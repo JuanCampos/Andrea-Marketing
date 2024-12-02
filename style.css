@@ -341,7 +341,7 @@ p{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 54vh !important;
+        height: 34vh !important;
         background: url(img/header.png) no-repeat;
         background-size: contain;
         background-position: center 62px;
