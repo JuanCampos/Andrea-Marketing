@@ -402,14 +402,14 @@ p{
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 412px) {
     
     .header{
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 37vh !important;
+        height: 22vh !important;
         background: url(img/header.png) no-repeat;
         background-size: contain;
         background-position: center 52px;
